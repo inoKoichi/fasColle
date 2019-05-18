@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 //import com.yuka.artWorks.repository.PrefectureRepository;
 
 @Controller
-public class shopSearchController {
+public class ShopSearchController {
 	@RequestMapping("/shopSearch" )
 	public String helloWorld(Model model) {
 		model.addAttribute("message", "こんにちは世界");

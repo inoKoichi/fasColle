@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 //import com.yuka.artWorks.repository.PrefectureRepository;
 
 @Controller
-public class loginController {
+public class LoginController {
 	@RequestMapping("/")
 	public String helloWorld(Model model) {
 		model.addAttribute("message", "こんにちは世界");

@@ -4,37 +4,40 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "USER")
-public class User {
+public class  User {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
-	private Integer userId;
+	public Integer userId;
 
 	@Column(name = "user_name")
-	private String userName;
+	public String userName;
 
 	@Column(name = "mail_address")
-	private String mailAddress;
+	public String mailAddress;
 
 	@Column(name = "password")
-	private String password;
+	public String password;
 
 	@Column(name = "profile_pic_url")
-	private String profilePicUrl;
+	public String profilePicUrl;
 
 	@Column(name = "register_datetime")
-	private Date registerDatetime;
+	public Date registerDatetime;
 
 	@Column(name = "update_datetime")
-	private Date updateDatetime;
+	public Date updateDatetime;
 
 	@Column(name = "unsubscribe_flg")
-	private Integer unsubscribeFlg;
+	public Integer unsubscribeFlg;
 
 	public Integer getUserId() {
 		return userId;

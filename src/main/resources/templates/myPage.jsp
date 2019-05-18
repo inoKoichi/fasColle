@@ -38,36 +38,36 @@
 		</div>
 	</nav>
 
-<%-- 	<form class="form-horizontal" th:action="@{/updateUser}" th:object="${UserModel}" method="post"> --%>
-	<form class="form-horizontal" >
-		<fieldset>
+<!--  	<form class="form-horizontal" th:action="myPage" th:action="@{/myPage}" th:method="put"> -->
+	<form class="form-horizontal" th:action="@{/myPage/update}" th:object="${myPageForm}" th:method="post" >
+	<fieldset>
 			<legend >マイプロフィール</legend>
 			<div class="form-group">
 				<label for="inputDefault" class="col-lg-2 control-label">ニックネーム</label>
 				<div class="col-lg-10">
-					<input type="text" class="form-control" id="userName" th:value="*{userName}">
+ 					<input type="text" class="form-control" id="userName" th:value="*{user.userName}">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="inputEmail" class="col-lg-2 control-label">Email</label>
 				<div class="col-lg-10">
-					<input type="text" class="form-control" id="mailAddress" placeholder="Email" th:value="*{mailAddress}">
+					<input type="text" class="form-control" id="mailAddress" placeholder="Email" th:value="*{user.mailAddress}">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="inputPassword" class="col-lg-2 control-label">Password</label>
 				<div class="col-lg-10">
-					<input type="password" class="form-control" id="password" th:value="*{password}">
+					<input type="password" class="form-control" id="password" th:value="*{user.password}">
 				</div>
 			</div>
-			<div class="form-group">
+<!-- 			<div class="form-group">
 				<label for="textArea" class="col-lg-2 control-label">自己紹介</label>
 				<div class="col-lg-10">
-					<textarea class="form-control" rows="3" id="textArea" ></textarea>
+					<textarea class="form-control" rows="3" id="selfDetail" ></textarea>
 					<span class="help-block">A longer block of help text that breaks onto a new line and may
 						extend beyond one line.</span>
 				</div>
-			</div>
+			</div> -->
 			<div class="form-group">
 				<div class="col-lg-10 col-lg-offset-2">
 					<button type="submit" class="btn btn-primary">登録</button>
@@ -75,7 +75,5 @@
 			</div>
 		</fieldset>
 	</form>
-
-
 </body>
 </html>
